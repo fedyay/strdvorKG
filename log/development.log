@@ -1,0 +1,378 @@
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/fedyay/rls/strdvorKG/app/models/user.rb:1)
+Started GET "/" for 127.0.0.1 at 2016-11-10 19:43:19 +0600
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (185.6ms)
+Started GET "/" for 127.0.0.1 at 2016-11-10 19:43:19 +0600
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.2ms)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/fedyay/rls/strdvorKG/app/models/user.rb:1)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/fedyay/rls/strdvorKG/config/environment.rb:5)
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from require at bin/rails:4)
+  [1m[35m (77.2ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (110.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "price" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "category_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (88.4ms)[0m  [1m[35mCREATE  INDEX "index_products_on_category_id" ON "products" ("category_id")[0m
+  [1m[35m (79.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "admin" boolean DEFAULT 'f')[0m
+  [1m[35m (88.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (132.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (94.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20151021143359')[0m
+  [1m[35m (77.2ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20150820141656'), ('20151021133017'), ('20151021132811'), ('20150820145141'), ('20150817135504');
+
+[0m
+  [1m[35m (91.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-11-10 13:47:27 UTC], ["updated_at", 2016-11-10 13:47:27 UTC]]
+  [1m[35m (64.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (70.3ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (99.5ms)[0m  [1m[35mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "price" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "category_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (99.2ms)[0m  [1m[35mCREATE  INDEX "index_products_on_category_id" ON "products" ("category_id")[0m
+  [1m[35m (98.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "admin" boolean DEFAULT 'f')[0m
+  [1m[35m (99.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (99.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (61.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20151021143359')[0m
+  [1m[35m (99.6ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20150820141656'), ('20151021133017'), ('20151021132811'), ('20150820145141'), ('20150817135504');
+
+[0m
+  [1m[35m (96.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-11-10 13:47:28 UTC], ["updated_at", 2016-11-10 13:47:28 UTC]]
+  [1m[35m (75.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "CPUs"], ["created_at", 2016-11-10 13:47:28 UTC], ["updated_at", 2016-11-10 13:47:28 UTC]]
+  [1m[35m (52.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Motherboards"], ["created_at", 2016-11-10 13:47:28 UTC], ["updated_at", 2016-11-10 13:47:28 UTC]]
+  [1m[35m (53.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "RAM"], ["created_at", 2016-11-10 13:47:28 UTC], ["updated_at", 2016-11-10 13:47:28 UTC]]
+  [1m[35m (52.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "HDDs"], ["created_at", 2016-11-10 13:47:28 UTC], ["updated_at", 2016-11-10 13:47:28 UTC]]
+  [1m[35m (52.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Fixtures"], ["created_at", 2016-11-10 13:47:28 UTC], ["updated_at", 2016-11-10 13:47:28 UTC]]
+  [1m[35m (53.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Intel Core i7"], ["description", "In debitis harum modi qui non. Eius voluptatem sequi. Minus tenetur qui et qui quia."], ["price", #<BigDecimal:51eafa0,'0.3E3',9(27)>], ["created_at", 2016-11-10 13:47:29 UTC], ["updated_at", 2016-11-10 13:47:29 UTC], ["category_id", 1]]
+  [1m[35m (53.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "4GB DDR3 RAM"], ["description", "Asperiores ullam dolores non molestiae quia sit. Qui nobis ut dolore necessitatibus aut. Dignissimos veritatis nihil cumque."], ["price", #<BigDecimal:555a730,'0.4E2',9(27)>], ["created_at", 2016-11-10 13:47:29 UTC], ["updated_at", 2016-11-10 13:47:29 UTC], ["category_id", 3]]
+  [1m[35m (84.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "1TB Seagate HDD"], ["description", "Accusamus occaecati nesciunt. Dolorum explicabo dignissimos nesciunt. Enim veniam cumque non. Qui ex odit odio debitis nisi."], ["price", #<BigDecimal:5562840,'0.6E2',9(27)>], ["created_at", 2016-11-10 13:47:29 UTC], ["updated_at", 2016-11-10 13:47:29 UTC], ["category_id", 4]]
+  [1m[35m (61.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Asus P5Q3"], ["description", "Nobis hic qui omnis quae. Sit aut iure et doloremque sit pariatur. Necessitatibus ut illum. Voluptates labore est facilis. Dolore at quas ut ipsum esse est autem."], ["price", #<BigDecimal:556abd0,'0.12E3',9(27)>], ["created_at", 2016-11-10 13:47:29 UTC], ["updated_at", 2016-11-10 13:47:29 UTC], ["category_id", 2]]
+  [1m[35m (84.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Synergistic Paper Watch"], ["description", "Aut voluptas qui accusantium nihil officia labore. Quod voluptate voluptatem velit eum et fugiat. Deserunt et voluptatum qui."], ["price", #<BigDecimal:5571ef8,'0.5722E2',18(36)>], ["created_at", 2016-11-10 13:47:29 UTC], ["updated_at", 2016-11-10 13:47:29 UTC], ["category_id", 5]]
+  [1m[35m (109.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Fantastic Steel Plate"], ["description", "Porro similique voluptas repudiandae dicta aliquam facere. Reprehenderit reiciendis accusantium cum fuga. Aut dolor dolores quod sapiente et officia. Unde voluptate corrupti tempora blanditiis consequatur. Magni sit corrupti expedita impedit sed."], ["price", #<BigDecimal:4358168,'0.9212E2',18(36)>], ["created_at", 2016-11-10 13:47:29 UTC], ["updated_at", 2016-11-10 13:47:29 UTC], ["category_id", 5]]
+  [1m[35m (121.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Lightweight Paper Watch"], ["description", "Magnam esse praesentium perspiciatis vel ea architecto. Laboriosam tenetur officiis temporibus quibusdam. In debitis alias dolorum corporis eius."], ["price", #<BigDecimal:557d848,'0.953E1',18(36)>], ["created_at", 2016-11-10 13:47:29 UTC], ["updated_at", 2016-11-10 13:47:29 UTC], ["category_id", 5]]
+  [1m[35m (73.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Enormous Bronze Car"], ["description", "Dignissimos ea cum similique architecto dolores est. Est consequatur ipsa commodi. Id tempora ut nostrum. Rem sed quo quia aut facilis soluta."], ["price", #<BigDecimal:55867b8,'0.3023E2',18(36)>], ["created_at", 2016-11-10 13:47:29 UTC], ["updated_at", 2016-11-10 13:47:29 UTC], ["category_id", 5]]
+  [1m[35m (72.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Small Linen Bag"], ["description", "Velit maxime quae aliquam ipsam hic ex voluptatibus. Quo debitis rerum perspiciatis vel. Officia eos nulla occaecati illum. Sint reiciendis molestias necessitatibus."], ["price", #<BigDecimal:52aac88,'0.8056E2',18(36)>], ["created_at", 2016-11-10 13:47:29 UTC], ["updated_at", 2016-11-10 13:47:29 UTC], ["category_id", 5]]
+  [1m[35m (86.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Fantastic Rubber Chair"], ["description", "Atque sunt inventore distinctio maxime. Quis rerum laudantium reiciendis cupiditate neque placeat quaerat. Molestias inventore corrupti deleniti eum eaque laboriosam."], ["price", #<BigDecimal:43115d8,'0.8231E2',18(36)>], ["created_at", 2016-11-10 13:47:29 UTC], ["updated_at", 2016-11-10 13:47:29 UTC], ["category_id", 5]]
+  [1m[35m (51.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Aerodynamic Granite Coat"], ["description", "Corrupti eveniet ad dolorem quo totam incidunt. Rerum qui voluptas. Hic facere et beatae in."], ["price", #<BigDecimal:558cdc0,'0.336E2',18(36)>], ["created_at", 2016-11-10 13:47:29 UTC], ["updated_at", 2016-11-10 13:47:29 UTC], ["category_id", 5]]
+  [1m[35m (73.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Mediocre Linen Shoes"], ["description", "Velit consequatur earum rem maxime. Quidem dolore aut minima necessitatibus et. Aut in odit. Neque suscipit expedita maxime."], ["price", #<BigDecimal:55973b0,'0.7415E2',18(36)>], ["created_at", 2016-11-10 13:47:30 UTC], ["updated_at", 2016-11-10 13:47:30 UTC], ["category_id", 5]]
+  [1m[35m (85.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Small Aluminum Hat"], ["description", "Quos exercitationem eos. Qui nihil provident aliquam ut enim corrupti consequatur. Ratione voluptates sequi quis quos qui quia neque. Modi omnis non occaecati facilis vel nulla maiores."], ["price", #<BigDecimal:5598b48,'0.225E1',18(36)>], ["created_at", 2016-11-10 13:47:30 UTC], ["updated_at", 2016-11-10 13:47:30 UTC], ["category_id", 5]]
+  [1m[35m (71.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Small Bronze Computer"], ["description", "Nesciunt dolores eum quo nisi et officiis. Voluptatem magni et et dolores eveniet. Et qui ut occaecati incidunt perferendis voluptatem ullam. Facilis ea omnis et."], ["price", #<BigDecimal:55a2fd0,'0.4199E2',18(36)>], ["created_at", 2016-11-10 13:47:30 UTC], ["updated_at", 2016-11-10 13:47:30 UTC], ["category_id", 5]]
+  [1m[35m (84.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Heavy Duty Marble Coat"], ["description", "Molestias repudiandae cum totam expedita. Ea natus porro. Alias sunt atque sed eum. Autem commodi temporibus enim odit unde eius."], ["price", #<BigDecimal:42a9d70,'0.2846E2',18(36)>], ["created_at", 2016-11-10 13:47:30 UTC], ["updated_at", 2016-11-10 13:47:30 UTC], ["category_id", 5]]
+  [1m[35m (62.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Fantastic Silk Keyboard"], ["description", "Saepe dolorem laborum. Accusantium sequi aliquid temporibus reiciendis quis. Non voluptas exercitationem nihil. Cum deleniti minus quaerat similique."], ["price", #<BigDecimal:55ad0e8,'0.666E2',18(36)>], ["created_at", 2016-11-10 13:47:30 UTC], ["updated_at", 2016-11-10 13:47:30 UTC], ["category_id", 5]]
+  [1m[35m (90.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Durable Rubber Wallet"], ["description", "Sit quis officiis ratione sed nesciunt atque. Id sed nihil vero recusandae consequatur culpa. Totam et et quia. Rerum minima iste molestiae quibusdam."], ["price", #<BigDecimal:55b6030,'0.2962E2',18(36)>], ["created_at", 2016-11-10 13:47:30 UTC], ["updated_at", 2016-11-10 13:47:30 UTC], ["category_id", 5]]
+  [1m[35m (89.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Synergistic Iron Car"], ["description", "Est cupiditate facere consequuntur tempora doloremque et vero. Hic asperiores modi laudantium deleniti ducimus et. Quod pariatur doloremque beatae omnis ut perspiciatis repellat."], ["price", #<BigDecimal:55bfa68,'0.5867E2',18(36)>], ["created_at", 2016-11-10 13:47:30 UTC], ["updated_at", 2016-11-10 13:47:30 UTC], ["category_id", 5]]
+  [1m[35m (61.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Awesome Wooden Table"], ["description", "Sunt explicabo quo vero voluptatem molestiae facilis maiores. Accusamus quia minima est et omnis veniam. Non eum ipsum earum. Sed nemo qui rerum et ullam."], ["price", #<BigDecimal:55c0c10,'0.6186E2',18(36)>], ["created_at", 2016-11-10 13:47:30 UTC], ["updated_at", 2016-11-10 13:47:30 UTC], ["category_id", 5]]
+  [1m[35m (86.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Lightweight Marble Table"], ["description", "Repellendus dolor illo. Qui reprehenderit atque qui. Soluta quas possimus eveniet eos."], ["price", #<BigDecimal:55cac60,'0.1823E2',18(36)>], ["created_at", 2016-11-10 13:47:30 UTC], ["updated_at", 2016-11-10 13:47:30 UTC], ["category_id", 5]]
+  [1m[35m (74.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Lightweight Granite Coat"], ["description", "Est asperiores facere ipsum placeat aut dolor consequatur. Temporibus ullam rem impedit. Ipsa quis molestiae. Hic voluptatibus earum vel harum aut aut. Harum aspernatur voluptate quia quos veritatis hic."], ["price", #<BigDecimal:423da08,'0.1687E2',18(36)>], ["created_at", 2016-11-10 13:47:30 UTC], ["updated_at", 2016-11-10 13:47:30 UTC], ["category_id", 5]]
+  [1m[35m (62.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Practical Paper Coat"], ["description", "Veritatis omnis repellat molestias perferendis eaque eos rem. Magnam consequatur earum qui eveniet eum omnis. Non incidunt laboriosam."], ["price", #<BigDecimal:55d58b8,'0.6529E2',18(36)>], ["created_at", 2016-11-10 13:47:30 UTC], ["updated_at", 2016-11-10 13:47:30 UTC], ["category_id", 5]]
+  [1m[35m (73.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Intelligent Steel Shirt"], ["description", "Omnis reprehenderit ipsum sint esse facilis nam voluptatibus. Tempore quo optio ipsam qui aspernatur dolor dolorum. Quia fuga doloremque quis illo. Rerum voluptas qui et dolor."], ["price", #<BigDecimal:55df750,'0.3422E2',18(36)>], ["created_at", 2016-11-10 13:47:30 UTC], ["updated_at", 2016-11-10 13:47:30 UTC], ["category_id", 5]]
+  [1m[35m (53.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Gorgeous Cotton Gloves"], ["description", "Dicta ab eveniet non quia. Asperiores atque quia et rerum architecto quis repellat. Quia illum quidem non eum magni vitae reiciendis. Beatae dolor et ut repudiandae placeat."], ["price", #<BigDecimal:55e0b28,'0.2321E2',18(36)>], ["created_at", 2016-11-10 13:47:31 UTC], ["updated_at", 2016-11-10 13:47:31 UTC], ["category_id", 5]]
+  [1m[35m (122.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Durable Leather Lamp"], ["description", "Veritatis quod sit. Veniam omnis dolores aut. In id sit. Inventore natus dolores ratione optio facilis dicta culpa."], ["price", #<BigDecimal:55eba50,'0.923E1',18(36)>], ["created_at", 2016-11-10 13:47:31 UTC], ["updated_at", 2016-11-10 13:47:31 UTC], ["category_id", 5]]
+  [1m[35m (115.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Gorgeous Leather Watch"], ["description", "Tempora perferendis minus molestiae omnis. Odio et fugiat repellendus rerum sunt aut aliquam. Quia adipisci distinctio debitis quasi quam."], ["price", #<BigDecimal:55ecce8,'0.7061E2',18(36)>], ["created_at", 2016-11-10 13:47:31 UTC], ["updated_at", 2016-11-10 13:47:31 UTC], ["category_id", 5]]
+  [1m[35m (106.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Durable Iron Hat"], ["description", "Incidunt minus consectetur autem nihil. Est esse temporibus quo et impedit voluptatem. Et omnis deleniti ipsa at."], ["price", #<BigDecimal:56074a8,'0.5161E2',18(36)>], ["created_at", 2016-11-10 13:47:31 UTC], ["updated_at", 2016-11-10 13:47:31 UTC], ["category_id", 5]]
+  [1m[35m (85.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Incredible Granite Clock"], ["description", "Dicta voluptatem esse quis asperiores ex. Illum incidunt quo. Rerum quis perferendis iure unde magni voluptate."], ["price", #<BigDecimal:560c020,'0.4857E2',18(36)>], ["created_at", 2016-11-10 13:47:31 UTC], ["updated_at", 2016-11-10 13:47:31 UTC], ["category_id", 5]]
+  [1m[35m (112.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Rustic Paper Coat"], ["description", "Facere ex unde. Vel eveniet fuga et assumenda. Nobis suscipit eos ipsa doloremque dolorem asperiores ut. Est molestiae alias eos nihil repellat. Quo esse ipsa."], ["price", #<BigDecimal:5619108,'0.3494E2',18(36)>], ["created_at", 2016-11-10 13:47:31 UTC], ["updated_at", 2016-11-10 13:47:31 UTC], ["category_id", 5]]
+  [1m[35m (90.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Mediocre Silk Bench"], ["description", "Corrupti in eaque quia iure architecto et. Voluptate laudantium illo et tenetur. Nostrum placeat ut quos suscipit nihil at. Autem est dolores qui voluptas. Assumenda esse ut aliquid cupiditate praesentium modi."], ["price", #<BigDecimal:41a51b8,'0.2216E2',18(36)>], ["created_at", 2016-11-10 13:47:31 UTC], ["updated_at", 2016-11-10 13:47:31 UTC], ["category_id", 5]]
+  [1m[35m (107.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Enormous Linen Wallet"], ["description", "Omnis neque consequatur id. Adipisci est sit fugiat suscipit rerum. Repudiandae aut praesentium quia corporis ullam expedita."], ["price", #<BigDecimal:5639fc0,'0.8028E2',18(36)>], ["created_at", 2016-11-10 13:47:31 UTC], ["updated_at", 2016-11-10 13:47:31 UTC], ["category_id", 5]]
+  [1m[35m (73.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Synergistic Marble Shoes"], ["description", "Maiores voluptates odit quis qui. Temporibus in sed quidem illo autem aut voluptates. Corporis sed corrupti odit tempore pariatur. Aut voluptatem dolor qui laudantium iste. Sunt veritatis dolorem sed earum ad saepe ut."], ["price", #<BigDecimal:41809d0,'0.5365E2',18(36)>], ["created_at", 2016-11-10 13:47:31 UTC], ["updated_at", 2016-11-10 13:47:31 UTC], ["category_id", 5]]
+  [1m[35m (94.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Rustic Rubber Pants"], ["description", "Et qui accusantium quae et consequatur autem. Est quae debitis temporibus ex libero. Rerum odit et. Fugit totam ipsam."], ["price", #<BigDecimal:5655ae0,'0.3515E2',18(36)>], ["created_at", 2016-11-10 13:47:31 UTC], ["updated_at", 2016-11-10 13:47:31 UTC], ["category_id", 5]]
+  [1m[35m (85.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Synergistic Granite Watch"], ["description", "Ut voluptatum ratione. Quasi quia veniam dolores quo enim dignissimos molestiae. Repellat ea quod modi non beatae qui fugit. Repudiandae distinctio et natus ex. Officiis voluptas dolor consequatur accusantium."], ["price", #<BigDecimal:5673860,'0.5457E2',18(36)>], ["created_at", 2016-11-10 13:47:32 UTC], ["updated_at", 2016-11-10 13:47:32 UTC], ["category_id", 5]]
+  [1m[35m (95.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Lightweight Copper Hat"], ["description", "Accusamus dolore explicabo. Esse fuga iure amet autem. Est aut tempora totam quod ab tenetur quaerat."], ["price", #<BigDecimal:414a7e0,'0.451E2',18(36)>], ["created_at", 2016-11-10 13:47:32 UTC], ["updated_at", 2016-11-10 13:47:32 UTC], ["category_id", 5]]
+  [1m[35m (97.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ergonomic Iron Car"], ["description", "Natus dolore et rerum modi. Voluptatibus non magnam officiis eveniet qui. Veniam pariatur placeat ad et. Quam qui nobis eos omnis et autem ut. Quae quibusdam et velit aut."], ["price", #<BigDecimal:568cd38,'0.2301E2',18(36)>], ["created_at", 2016-11-10 13:47:32 UTC], ["updated_at", 2016-11-10 13:47:32 UTC], ["category_id", 5]]
+  [1m[35m (93.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Incredible Wooden Wallet"], ["description", "Blanditiis sed fugiat esse est molestias. Quia ea officia harum quos est. Eos quis quis voluptatem quod. Voluptas ratione est ipsum."], ["price", #<BigDecimal:56a19b8,'0.2134E2',18(36)>], ["created_at", 2016-11-10 13:47:32 UTC], ["updated_at", 2016-11-10 13:47:32 UTC], ["category_id", 5]]
+  [1m[35m (84.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Intelligent Steel Coat"], ["description", "Ex qui ea rerum quisquam eos dolores. Inventore fugit error tempore cumque eos atque. Ut velit rem porro temporibus optio. Praesentium quae delectus voluptatem ex dignissimos. Minus quia at culpa quam."], ["price", #<BigDecimal:56c37e8,'0.562E2',18(36)>], ["created_at", 2016-11-10 13:47:32 UTC], ["updated_at", 2016-11-10 13:47:32 UTC], ["category_id", 5]]
+  [1m[35m (106.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Enormous Cotton Bag"], ["description", "Quis eos minima et mollitia praesentium. Non exercitationem nulla. Voluptatem blanditiis qui quam dolor asperiores reprehenderit natus."], ["price", #<BigDecimal:56c5bd8,'0.5266E2',18(36)>], ["created_at", 2016-11-10 13:47:32 UTC], ["updated_at", 2016-11-10 13:47:32 UTC], ["category_id", 5]]
+  [1m[35m (101.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Intelligent Wool Bottle"], ["description", "Dolorum fugiat vitae. Vero dolorem repellat voluptas accusamus tempore delectus. Eos voluptatem est natus molestiae cupiditate tempora. Perferendis rem qui."], ["price", #<BigDecimal:40d64d0,'0.6661E2',18(36)>], ["created_at", 2016-11-10 13:47:32 UTC], ["updated_at", 2016-11-10 13:47:32 UTC], ["category_id", 5]]
+  [1m[35m (78.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Enormous Steel Coat"], ["description", "Praesentium quibusdam et et hic sapiente sunt consequuntur. Qui nostrum rem hic placeat illo enim ullam. Aut sed tempore. Quo quia temporibus culpa quaerat. Quia expedita similique repellat sunt sit id necessitatibus."], ["price", #<BigDecimal:5291bc0,'0.6959E2',18(36)>], ["created_at", 2016-11-10 13:47:32 UTC], ["updated_at", 2016-11-10 13:47:32 UTC], ["category_id", 5]]
+  [1m[35m (62.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Incredible Bronze Bag"], ["description", "Harum officiis et rerum minus dignissimos possimus. Architecto aut sit. Ab qui quos. Cumque molestiae adipisci consequuntur. Mollitia et ut."], ["price", #<BigDecimal:56e0460,'0.7257E2',18(36)>], ["created_at", 2016-11-10 13:47:32 UTC], ["updated_at", 2016-11-10 13:47:32 UTC], ["category_id", 5]]
+  [1m[35m (117.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Intelligent Linen Shirt"], ["description", "Ducimus quis molestiae. Sit similique voluptatem accusamus. Eligendi est iusto et nihil. Omnis voluptatibus error odit."], ["price", #<BigDecimal:56f7110,'0.4135E2',18(36)>], ["created_at", 2016-11-10 13:47:32 UTC], ["updated_at", 2016-11-10 13:47:32 UTC], ["category_id", 5]]
+  [1m[35m (96.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Awesome Linen Bench"], ["description", "Et ut ad omnis quibusdam quisquam. Et deserunt eos eligendi dolore qui. Quod consequuntur illo aut laborum. Veritatis dolor unde. Est eligendi voluptatem esse veniam similique molestiae."], ["price", #<BigDecimal:40b3b38,'0.8393E2',18(36)>], ["created_at", 2016-11-10 13:47:33 UTC], ["updated_at", 2016-11-10 13:47:33 UTC], ["category_id", 5]]
+  [1m[35m (73.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Incredible Cotton Coat"], ["description", "Cupiditate quisquam aspernatur non. Dolorem voluptatem incidunt explicabo. Animi similique et soluta expedita."], ["price", #<BigDecimal:56fff68,'0.7833E2',18(36)>], ["created_at", 2016-11-10 13:47:33 UTC], ["updated_at", 2016-11-10 13:47:33 UTC], ["category_id", 5]]
+  [1m[35m (52.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Aerodynamic Rubber Shoes"], ["description", "Perferendis ullam dolore labore eos laudantium beatae velit. Necessitatibus ut fugit. Commodi possimus et aut. Labore omnis ea laudantium magnam pariatur quaerat eligendi. Aliquam quia voluptatem quidem totam quia autem deserunt."], ["price", #<BigDecimal:5706c00,'0.344E1',18(36)>], ["created_at", 2016-11-10 13:47:33 UTC], ["updated_at", 2016-11-10 13:47:33 UTC], ["category_id", 5]]
+  [1m[35m (88.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Practical Linen Lamp"], ["description", "Autem inventore odit. Est nisi ea ex a earum corporis consequatur. Molestiae consequatur assumenda ut."], ["price", #<BigDecimal:5710bd8,'0.3488E2',18(36)>], ["created_at", 2016-11-10 13:47:33 UTC], ["updated_at", 2016-11-10 13:47:33 UTC], ["category_id", 5]]
+  [1m[35m (70.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Small Steel Plate"], ["description", "Id voluptatum tempora expedita reprehenderit et. Similique eligendi mollitia quas qui. Omnis est corrupti aut aut. Corporis illo deleniti iste aut dolorem qui hic. Dignissimos fugit ut ab."], ["price", #<BigDecimal:571c050,'0.6382E2',18(36)>], ["created_at", 2016-11-10 13:47:33 UTC], ["updated_at", 2016-11-10 13:47:33 UTC], ["category_id", 5]]
+  [1m[35m (62.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Durable Granite Computer"], ["description", "Accusantium voluptate earum corporis illo perspiciatis maxime. Aut autem ut aut ut velit. Esse ullam eveniet minus omnis dolorum. Suscipit exercitationem est. Architecto similique quia neque expedita."], ["price", #<BigDecimal:5733548,'0.7793E2',18(36)>], ["created_at", 2016-11-10 13:47:33 UTC], ["updated_at", 2016-11-10 13:47:33 UTC], ["category_id", 5]]
+  [1m[35m (114.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Awesome Leather Lamp"], ["description", "Sed modi dignissimos maxime. Tenetur aliquam aut voluptas maiores odit aspernatur iste. Quod non nesciunt alias maxime voluptas distinctio in. Voluptatem aut veritatis in error quas vero reprehenderit."], ["price", #<BigDecimal:5740e50,'0.4239E2',18(36)>], ["created_at", 2016-11-10 13:47:33 UTC], ["updated_at", 2016-11-10 13:47:33 UTC], ["category_id", 5]]
+  [1m[35m (78.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Incredible Marble Bag"], ["description", "Ipsa aut optio voluptatem dicta eius necessitatibus animi. Consequatur vitae tenetur. Unde inventore ut maxime. Nam aliquid occaecati deleniti harum quidem commodi."], ["price", #<BigDecimal:406dc50,'0.1752E2',18(36)>], ["created_at", 2016-11-10 13:47:33 UTC], ["updated_at", 2016-11-10 13:47:33 UTC], ["category_id", 5]]
+  [1m[35m (62.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Synergistic Concrete Lamp"], ["description", "Est beatae inventore. Et voluptatem repellat est. Quisquam ipsa porro suscipit qui."], ["price", #<BigDecimal:4068340,'0.3309E2',18(36)>], ["created_at", 2016-11-10 13:47:33 UTC], ["updated_at", 2016-11-10 13:47:33 UTC], ["category_id", 5]]
+  [1m[35m (93.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Practical Wool Lamp"], ["description", "Qui reiciendis esse adipisci aut rerum maiores ea. Veritatis nisi ab. Quam animi omnis ut."], ["price", #<BigDecimal:576df90,'0.8497E2',18(36)>], ["created_at", 2016-11-10 13:47:33 UTC], ["updated_at", 2016-11-10 13:47:33 UTC], ["category_id", 5]]
+  [1m[35m (65.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "price", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ergonomic Iron Lamp"], ["description", "Fugiat libero facilis aut. Temporibus exercitationem aut quidem illo illum. Cum vel est molestiae reprehenderit voluptas mollitia possimus. Repellat magnam rerum neque velit quasi."], ["price", #<BigDecimal:5778170,'0.6321E2',18(36)>], ["created_at", 2016-11-10 13:47:33 UTC], ["updated_at", 2016-11-10 13:47:33 UTC], ["category_id", 5]]
+  [1m[35m (95.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "johndoe@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["name", "John Doe"], ["created_at", 2016-11-10 13:47:34 UTC], ["updated_at", 2016-11-10 13:47:34 UTC], ["email", "johndoe@example.com"], ["encrypted_password", "$2a$10$BBhYPxNBs0RcSB2HSNZJD.vVfLXgl30TD1.eW528jGTqz5Y1Yl3Um"]]
+  [1m[35m (54.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at", "email", "encrypted_password", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Admin"], ["created_at", 2016-11-10 13:47:34 UTC], ["updated_at", 2016-11-10 13:47:34 UTC], ["email", "admin@example.com"], ["encrypted_password", "$2a$10$OOZVDvIb9sglpDarTEoDB.2BBIve652uWqybn3sms.ky0ZNR9g5ca"], ["admin", true]]
+  [1m[35m (59.3ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/fedyay/rls/strdvorKG/app/models/user.rb:1)
+Started GET "/" for 127.0.0.1 at 2016-11-10 19:47:43 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered products/index.html.erb within layouts/application (7093.4ms)
+  Rendered layouts/application/_navbar.html.erb (5.9ms)
+Completed 200 OK in 7310ms (Views: 7260.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-10 19:47:51 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-10 19:47:51 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-10 19:47:51 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-10 19:47:51 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-10 19:47:51 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-10 19:47:51 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-10 19:47:51 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-10 19:47:51 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-10 19:47:51 +0600
+Started GET "/?page=2" for 127.0.0.1 at 2016-11-10 19:47:54 +0600
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 10]]
+  Rendered products/index.html.erb within layouts/application (17.7ms)
+  Rendered layouts/application/_navbar.html.erb (2.4ms)
+Completed 200 OK in 77ms (Views: 73.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/?page=6" for 127.0.0.1 at 2016-11-10 19:48:00 +0600
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"6"}
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 50]]
+  Rendered products/index.html.erb within layouts/application (20.6ms)
+  Rendered layouts/application/_navbar.html.erb (2.9ms)
+Completed 200 OK in 80ms (Views: 77.6ms | ActiveRecord: 1.0ms)
+
+
