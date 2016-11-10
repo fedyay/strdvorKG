@@ -32,5 +32,4 @@ copy_image_fixture(fixtures_path.join('mb.jpg'), mb.id)
                  category: fixtures_category)
 end
 
-user = User.create(name: 'John Doe', email: 'johndoe@example.com', password: '12345678', password_confirmation: '12345678')
 admin_user = User.create(name: 'Admin', email: 'admin@example.com', password: 'adminadmin', password_confirmation: 'adminadmin', admin: true)
