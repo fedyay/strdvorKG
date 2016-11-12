@@ -14,6 +14,11 @@ Rails.application.routes.draw do
       root 'products#index'
       resources :products
       resources :categories
+      resources :carts
+      get '/completed_carts' => 'carts#completed', as: :carts_completed
+      get '/declined_carts' => 'carts#declined', as: :carts_declined
+      get '/processing_carts' => 'carts#processing', as: :carts_processing
+      delete '/carts/:id' => 'carts#destroy', as: :carts_destroy
     end
   end
 end

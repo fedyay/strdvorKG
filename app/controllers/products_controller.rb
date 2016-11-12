@@ -52,6 +52,7 @@ class ProductsController < ApplicationController
 
   def subb
     @cart = Cart.find(session[:cart_id])
+    @cart.status = 'subbed'
     @cart.update(cart_params)
     flash[:success] = 'Wait for us to call you.'
 

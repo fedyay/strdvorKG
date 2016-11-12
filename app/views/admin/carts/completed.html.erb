@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-sm-8">
+    <h1>Orders</h1>
+  </div>
+  <div class="col-sm-4">
+    <%= link_to 'Pending', admin_carts_path, class: 'btn btn-default' %>
+    <%= link_to 'Declined', admin_carts_declined_path, class: 'btn btn-default' %>
+    <%= link_to 'Processing', admin_carts_processing_path, class: 'btn btn-default' %>
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <h3>Завершённые</h3>
+  <table class="table table-striped">
+    <tr>
+      <th>Phone</th>
+      <th>Name</th>
+      <th>Total</th>
+      <th>Actions</th>
+    </tr>
+
+    <% @completed.each do |order| %>
+        <tr>
+          <td><%= order.phone %></td>
+          <td><%= order.name %></td>
+          <td><%= order.total %></td>
+          <td>
+            <%= link_to 'Delete', admin_carts_destroy_path(order), method: 'delete', class: 'btn btn-danger' %>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+</div>
