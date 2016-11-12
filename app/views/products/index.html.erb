@@ -63,8 +63,11 @@
           <% @cart.cart_items.each do |item| %>
             <% product = Product.find(item.item_id) %>
             <%= product.title %> x <%= item.quantity %>
+            <%= link_to 'Remove one', cart_rem1_path(product), method: 'post', class: 'btn btn-default' %>
+            <br>
             <br>
           <% end %>
+          <%= link_to 'Clear cart', cart_clear_path, method: 'post', class: 'btn btn-danger' %>
         </div>
       </div>
   </div>

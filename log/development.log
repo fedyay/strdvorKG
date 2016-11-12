@@ -14280,3 +14280,1396 @@ Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c
 Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:21:45 +0600
 Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:21:45 +0600
 Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:21:45 +0600
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:25:47 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (56.7ms)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 4.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"arem1_cart", :controller=>"products"} missing required keys: [:id]):
+    64:             <% product = Product.find(item.item_id) %>
+    65:             <%= product.title %> x <%= item.quantity %>
+    66:             <br>
+    67:             <%= link_to 'Remove 1', cart_rem1_path, class: 'ctn' %>
+    68: 
+    69:             <br>
+    70:           <% end %>
+  
+app/views/products/index.html.erb:67:in `block in _app_views_products_index_html_erb__4561374538692295880_41694040'
+app/views/products/index.html.erb:63:in `_app_views_products_index_html_erb__4561374538692295880_41694040'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.9ms)
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:26:07 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (60.9ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 4.8ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"rem1_cart", :controller=>"products"} missing required keys: [:id]):
+    64:             <% product = Product.find(item.item_id) %>
+    65:             <%= product.title %> x <%= item.quantity %>
+    66:             <br>
+    67:             <%= link_to 'Remove 1', cart_rem1_path, class: 'ctn' %>
+    68: 
+    69:             <br>
+    70:           <% end %>
+  
+app/views/products/index.html.erb:67:in `block in _app_views_products_index_html_erb__4561374538692295880_70120813573820'
+app/views/products/index.html.erb:63:in `_app_views_products_index_html_erb__4561374538692295880_70120813573820'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.3ms)
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:26:44 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (21.0ms)
+  Rendered layouts/application/_navbar.html.erb (1.7ms)
+Completed 200 OK in 59ms (Views: 54.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:26:44 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:26:44 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:26:44 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:26:44 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:26:44 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:26:44 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:26:44 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:26:44 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:26:44 +0600
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:34:56 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (1.1ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (21.8ms)
+  Rendered layouts/application/_navbar.html.erb (1.4ms)
+Completed 200 OK in 56ms (Views: 50.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:34:56 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:34:56 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:34:56 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:34:56 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:34:56 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:34:56 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:34:56 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:34:56 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:34:56 +0600
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:35:04 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (24.0ms)
+  Rendered layouts/application/_navbar.html.erb (1.3ms)
+Completed 200 OK in 67ms (Views: 61.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:35:04 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:04 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:04 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:04 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:04 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:04 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:04 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:04 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:35:04 +0600
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:35:13 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (21.3ms)
+  Rendered layouts/application/_navbar.html.erb (1.5ms)
+Completed 200 OK in 61ms (Views: 55.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:35:13 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:13 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:13 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:13 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:13 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:13 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:13 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:13 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:35:13 +0600
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:35:24 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (16.3ms)
+  Rendered layouts/application/_navbar.html.erb (1.3ms)
+Completed 200 OK in 70ms (Views: 65.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:24 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:24 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:24 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:24 +0600
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:35:24 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:24 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:24 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:35:24 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:35:25 +0600
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:37:10 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (62.7ms)
+  Rendered layouts/application/_navbar.html.erb (1.5ms)
+Completed 200 OK in 117ms (Views: 93.9ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:37:10 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:37:10 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:37:10 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:37:10 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:37:10 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:37:10 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:37:10 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:37:10 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:37:10 +0600
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:37:51 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (50.1ms)
+  Rendered layouts/application/_navbar.html.erb (1.4ms)
+Completed 200 OK in 100ms (Views: 77.6ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:37:51 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:37:51 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:37:51 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:37:51 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:37:51 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:37:52 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:37:52 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:37:52 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:37:52 +0600
+Started GET "/cart/clear" for 127.0.0.1 at 2016-11-12 21:37:53 +0600
+  
+ActionController::RoutingError (No route matches [GET] "/cart/clear"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [25 times] (14.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.8ms)
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:38:14 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/home/fedyay/rls/strdvorKG/app/views/products/index.html.erb:67: syntax error, unexpected keyword_class, expecting ')'
+...(product), method: 'post' class: 'btn btn-default' );@output...
+...                               ^
+/home/fedyay/rls/strdvorKG/app/views/products/index.html.erb:68: syntax error, unexpected keyword_class, expecting ')'
+...(product), method: 'post' class: 'btn btn-default' );@output...
+...                               ^
+/home/fedyay/rls/strdvorKG/app/views/products/index.html.erb:72: syntax error, unexpected keyword_class, expecting ')'
+...lear_path, method: 'post' class: 'btn btn-danger' );@output_...
+...                               ^):
+  
+app/views/products/index.html.erb:67: syntax error, unexpected keyword_class, expecting ')'
+app/views/products/index.html.erb:68: syntax error, unexpected keyword_class, expecting ')'
+app/views/products/index.html.erb:72: syntax error, unexpected keyword_class, expecting ')'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.5ms)
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:38:23 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.9ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (24.5ms)
+  Rendered layouts/application/_navbar.html.erb (1.3ms)
+Completed 200 OK in 66ms (Views: 59.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:38:23 +0600
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:38:23 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:38:23 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:38:23 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:38:23 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:38:23 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:38:23 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:38:23 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:38:24 +0600
+Started POST "/cart/clear" for 127.0.0.1 at 2016-11-12 21:38:26 +0600
+Processing by ProductsController#clear_cart as HTML
+  Parameters: {"authenticity_token"=>"5tfxF0frA7b8bgWeFriwWDwZjbEIftDgZcoM+FD+yLiPmMe3FUoyP71+RwhHtRsnjUIG86/p+SQiuZgWAiq3fA=="}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `clear' for nil:NilClass):
+  
+app/controllers/products_controller.rb:42:in `clear_cart'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.7ms)
+Started POST "/cart/clear" for 127.0.0.1 at 2016-11-12 21:38:51 +0600
+Processing by ProductsController#clear_cart as HTML
+  Parameters: {"authenticity_token"=>"5tfxF0frA7b8bgWeFriwWDwZjbEIftDgZcoM+FD+yLiPmMe3FUoyP71+RwhHtRsnjUIG86/p+SQiuZgWAiq3fA=="}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (94.0ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+No template found for ProductsController#clear_cart, rendering head :no_content
+Completed 204 No Content in 168ms (ActiveRecord: 96.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:38:55 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  Rendered products/index.html.erb within layouts/application (35.4ms)
+  Rendered layouts/application/_navbar.html.erb (1.2ms)
+Completed 200 OK in 75ms (Views: 65.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:38:55 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:38:55 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:38:55 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:38:55 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:38:55 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:38:55 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:38:55 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:38:55 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:38:55 +0600
+Started POST "/cart/add/2" for 127.0.0.1 at 2016-11-12 21:38:58 +0600
+Processing by ProductsController#a_cart as HTML
+  Parameters: {"authenticity_token"=>"NV0K0SNFFluvQSqPyjZg4r0kUDxA/QCbC73xt21DQyRcEjxxceQn0u5RaBmbO8udDH/bfudqKV9MzmVZP5c84A==", "id"=>"2"}
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 2 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "cart_items" ("owner_id", "owner_type", "quantity", "item_id", "item_type", "price_cents", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["owner_id", 4], ["owner_type", "Cart"], ["quantity", 1], ["item_id", 2], ["item_type", "Product"], ["price_cents", 4000], ["created_at", 2016-11-12 15:38:58 UTC], ["updated_at", 2016-11-12 15:38:58 UTC]]
+  [1m[35m (54.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 82ms (ActiveRecord: 57.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:38:58 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (18.3ms)
+  Rendered layouts/application/_navbar.html.erb (1.4ms)
+Completed 200 OK in 54ms (Views: 49.3ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/cart/clear" for 127.0.0.1 at 2016-11-12 21:39:00 +0600
+Processing by ProductsController#clear_cart as HTML
+  Parameters: {"authenticity_token"=>"m+ZZmfYZBHX4i3wJ7XrfnKiLLRLiNsuAkHC/LgMm847yqW85pLg1/LmbPp+8d3TjGdCmUEWh4kTXAyvAUfKMSg=="}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (97.6ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+No template found for ProductsController#clear_cart, rendering head :no_content
+Completed 204 No Content in 130ms (ActiveRecord: 97.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:39:01 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  Rendered products/index.html.erb within layouts/application (16.2ms)
+  Rendered layouts/application/_navbar.html.erb (1.1ms)
+Completed 200 OK in 50ms (Views: 46.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:39:01 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:39:01 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:39:01 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:39:01 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:39:01 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:39:01 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:39:02 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:39:02 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:39:02 +0600
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:40:55 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  Rendered products/index.html.erb within layouts/application (40.7ms)
+  Rendered layouts/application/_navbar.html.erb (1.2ms)
+Completed 200 OK in 89ms (Views: 71.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:40:55 +0600
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:40:55 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:40:55 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:40:55 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:40:55 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:40:55 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:40:55 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:40:55 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:40:55 +0600
+Started POST "/cart/add/2" for 127.0.0.1 at 2016-11-12 21:40:57 +0600
+Processing by ProductsController#a_cart as HTML
+  Parameters: {"authenticity_token"=>"bTrfB8w6nVPfgE5fbDIOWLGVNpEcX6MJTOkUwzWWOCwEdemnnpus2p6QDMk9P6UnAM6907vIis0LmoAtZ0JH6A==", "id"=>"2"}
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 2 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "cart_items" ("owner_id", "owner_type", "quantity", "item_id", "item_type", "price_cents", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["owner_id", 4], ["owner_type", "Cart"], ["quantity", 1], ["item_id", 2], ["item_type", "Product"], ["price_cents", 4000], ["created_at", 2016-11-12 15:40:57 UTC], ["updated_at", 2016-11-12 15:40:57 UTC]]
+  [1m[35m (135.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 158ms (ActiveRecord: 137.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:40:57 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (20.3ms)
+  Rendered layouts/application/_navbar.html.erb (1.6ms)
+Completed 200 OK in 71ms (Views: 66.4ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/cart/remove/2" for 127.0.0.1 at 2016-11-12 21:40:59 +0600
+Processing by ProductsController#rem1_cart as HTML
+  Parameters: {"authenticity_token"=>"lu+tNkEL3jO4u/jviicg3tie9Awnfq8mWEVBJzdnulP/oJuWE6rvuvmrunnbKouhacV/ToDphuIfNtXJZbPFlw==", "id"=>"2"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 2 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35mSQL (79.3ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 6]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 88ms (ActiveRecord: 80.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:40:59 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  Rendered products/index.html.erb within layouts/application (17.5ms)
+  Rendered layouts/application/_navbar.html.erb (1.3ms)
+Completed 200 OK in 58ms (Views: 54.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:41:01 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  Rendered products/index.html.erb within layouts/application (17.2ms)
+  Rendered layouts/application/_navbar.html.erb (1.3ms)
+Completed 200 OK in 53ms (Views: 48.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:41:01 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:01 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:01 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:01 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:01 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:01 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:01 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:01 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:41:01 +0600
+Started POST "/cart/add/1" for 127.0.0.1 at 2016-11-12 21:41:03 +0600
+Processing by ProductsController#a_cart as HTML
+  Parameters: {"authenticity_token"=>"fgt1Ej1yAeAxS4mycfurEhdwKwjIeD7TZDe7UunexZcXREOyb9MwaXBbyyQg9gBtpiugSm/vFxcjRC+8uwq6Uw==", "id"=>"1"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 1 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "cart_items" ("owner_id", "owner_type", "quantity", "item_id", "item_type", "price_cents", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["owner_id", 4], ["owner_type", "Cart"], ["quantity", 1], ["item_id", 1], ["item_type", "Product"], ["price_cents", 30000], ["created_at", 2016-11-12 15:41:03 UTC], ["updated_at", 2016-11-12 15:41:03 UTC]]
+  [1m[35m (186.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 225ms (ActiveRecord: 187.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:41:03 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (25.1ms)
+  Rendered layouts/application/_navbar.html.erb (2.1ms)
+Completed 200 OK in 70ms (Views: 66.1ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/cart/add/1" for 127.0.0.1 at 2016-11-12 21:41:05 +0600
+Processing by ProductsController#a_cart as HTML
+  Parameters: {"authenticity_token"=>"kRF/41y2kHISY03tZ6qngkBd/9giO7y1TQzCx5sndcb4XklDDheh+1NzD3s2pwz98QZ0moWslXEKf1YpyfMKAg==", "id"=>"1"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.5ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 1 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "cart_items" SET "quantity" = ?, "updated_at" = ? WHERE "cart_items"."id" = ?[0m  [["quantity", 2], ["updated_at", 2016-11-12 15:41:05 UTC], ["id", 7]]
+  [1m[35m (67.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms (ActiveRecord: 69.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:41:05 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (17.6ms)
+  Rendered layouts/application/_navbar.html.erb (1.4ms)
+Completed 200 OK in 51ms (Views: 47.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/cart/add/2" for 127.0.0.1 at 2016-11-12 21:41:08 +0600
+Processing by ProductsController#a_cart as HTML
+  Parameters: {"authenticity_token"=>"kw8NJurX0ND0yHlGo7kaBclVZGiGTEdNIsPmNEVm7NP6QDuGuHbhWbXYO9DytLF6eA7vKiHbbollsHLaF7KTFw==", "id"=>"2"}
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 2 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "cart_items" ("owner_id", "owner_type", "quantity", "item_id", "item_type", "price_cents", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["owner_id", 4], ["owner_type", "Cart"], ["quantity", 1], ["item_id", 2], ["item_type", "Product"], ["price_cents", 4000], ["created_at", 2016-11-12 15:41:08 UTC], ["updated_at", 2016-11-12 15:41:08 UTC]]
+  [1m[35m (63.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 75ms (ActiveRecord: 64.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:41:08 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (17.4ms)
+  Rendered layouts/application/_navbar.html.erb (1.7ms)
+Completed 200 OK in 50ms (Views: 46.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/cart/remove/1" for 127.0.0.1 at 2016-11-12 21:41:09 +0600
+Processing by ProductsController#rem1_cart as HTML
+  Parameters: {"authenticity_token"=>"bn7ufTKZAlEU7GvtiD2aEKaMjpavRf5vFHMKPKqxkHUHMdjdYDgz2FX8KXvZMDFvF9cF1AjS16tTAJ7S+GXvsQ==", "id"=>"1"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.5ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 1 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cart_items" SET "quantity" = ?, "updated_at" = ? WHERE "cart_items"."id" = ?[0m  [["quantity", 1], ["updated_at", 2016-11-12 15:41:09 UTC], ["id", 7]]
+  [1m[35m (107.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 126ms (ActiveRecord: 108.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:41:10 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (18.8ms)
+  Rendered layouts/application/_navbar.html.erb (1.2ms)
+Completed 200 OK in 55ms (Views: 50.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:41:11 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (18.4ms)
+  Rendered layouts/application/_navbar.html.erb (1.2ms)
+Completed 200 OK in 52ms (Views: 47.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:41:11 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:11 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:11 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:11 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:11 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:11 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:11 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:11 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:41:11 +0600
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:41:34 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (50.3ms)
+  Rendered layouts/application/_navbar.html.erb (1.3ms)
+Completed 200 OK in 100ms (Views: 80.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:41:34 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:34 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:34 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:34 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:34 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:34 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:34 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:34 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:41:34 +0600
+Started POST "/cart/add/2" for 127.0.0.1 at 2016-11-12 21:41:36 +0600
+Processing by ProductsController#a_cart as HTML
+  Parameters: {"authenticity_token"=>"53j9vlK5N5AEmlaOaXbeseWAzOV/dtkbJXMdOnnf+AKON8seABgGGUWKFBg4e3XOVNtHp9jh8N9iAInUKwuHxg==", "id"=>"2"}
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.5ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 2 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cart_items" SET "quantity" = ?, "updated_at" = ? WHERE "cart_items"."id" = ?[0m  [["quantity", 2], ["updated_at", 2016-11-12 15:41:36 UTC], ["id", 8]]
+  [1m[35m (156.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 171ms (ActiveRecord: 158.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:41:36 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (20.1ms)
+  Rendered layouts/application/_navbar.html.erb (1.4ms)
+Completed 200 OK in 63ms (Views: 59.7ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/cart/remove/2" for 127.0.0.1 at 2016-11-12 21:41:38 +0600
+Processing by ProductsController#rem1_cart as HTML
+  Parameters: {"authenticity_token"=>"aPVvZBly71x6HskXt/ERvQSCWMee8q4kzKQ4eRmrA5wBulnES9Pe1TsOi4Hm/LrCtdnThTllh+CL16yXS398WA==", "id"=>"2"}
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 2 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "cart_items" SET "quantity" = ?, "updated_at" = ? WHERE "cart_items"."id" = ?[0m  [["quantity", 1], ["updated_at", 2016-11-12 15:41:38 UTC], ["id", 8]]
+  [1m[35m (67.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 80ms (ActiveRecord: 68.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:41:38 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (16.9ms)
+  Rendered layouts/application/_navbar.html.erb (1.4ms)
+Completed 200 OK in 52ms (Views: 48.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:41:40 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (18.5ms)
+  Rendered layouts/application/_navbar.html.erb (1.3ms)
+Completed 200 OK in 54ms (Views: 49.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:41:40 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:40 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:40 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:40 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:40 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:40 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:40 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:40 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:41:40 +0600
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:41:48 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (70.9ms)
+  Rendered layouts/application/_navbar.html.erb (1.2ms)
+Completed 200 OK in 117ms (Views: 97.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:41:48 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:48 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:48 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:48 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:48 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:48 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:48 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:41:48 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:41:48 +0600
+Started POST "/cart/remove/2" for 127.0.0.1 at 2016-11-12 21:41:51 +0600
+Processing by ProductsController#rem1_cart as HTML
+  Parameters: {"authenticity_token"=>"ZBFBF8Xu1s5z4E90tsfWBw3891NK0+nh11/3+yrA7YsNXne3l0/nRzLwDeLnyn14vKd8Ee1EwCWQLGMVeBSSTw==", "id"=>"2"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 2 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35mSQL (58.7ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 8]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 68ms (ActiveRecord: 59.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:41:51 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (18.1ms)
+  Rendered layouts/application/_navbar.html.erb (2.1ms)
+Completed 200 OK in 56ms (Views: 51.4ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/cart/add/2" for 127.0.0.1 at 2016-11-12 21:41:53 +0600
+Processing by ProductsController#a_cart as HTML
+  Parameters: {"authenticity_token"=>"Hu6Ahe57JOxKYR+UNLn8uGyPaH3/xcMxywWdZtTNqEF3obYlvNoVZQtxXQJltFfH3dTjP1hS6vWMdgmIhhnXhQ==", "id"=>"2"}
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 2 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "cart_items" ("owner_id", "owner_type", "quantity", "item_id", "item_type", "price_cents", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["owner_id", 4], ["owner_type", "Cart"], ["quantity", 1], ["item_id", 2], ["item_type", "Product"], ["price_cents", 4000], ["created_at", 2016-11-12 15:41:53 UTC], ["updated_at", 2016-11-12 15:41:53 UTC]]
+  [1m[35m (81.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 95ms (ActiveRecord: 83.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:41:53 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (18.1ms)
+  Rendered layouts/application/_navbar.html.erb (1.2ms)
+Completed 200 OK in 52ms (Views: 47.5ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/cart/add/2" for 127.0.0.1 at 2016-11-12 21:41:55 +0600
+Processing by ProductsController#a_cart as HTML
+  Parameters: {"authenticity_token"=>"Ri2ggGPiVDf1Vit8aymrk1Lp515QERezmE8wmTsMaUYvYpYgMUNlvrRGaeo6JADs47JsHPeGPnffPKR3adgWgg==", "id"=>"2"}
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 2 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cart_items" SET "quantity" = ?, "updated_at" = ? WHERE "cart_items"."id" = ?[0m  [["quantity", 2], ["updated_at", 2016-11-12 15:41:55 UTC], ["id", 9]]
+  [1m[35m (89.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 102ms (ActiveRecord: 91.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:41:55 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (16.7ms)
+  Rendered layouts/application/_navbar.html.erb (1.3ms)
+Completed 200 OK in 51ms (Views: 46.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/cart/remove/2" for 127.0.0.1 at 2016-11-12 21:41:56 +0600
+Processing by ProductsController#rem1_cart as HTML
+  Parameters: {"authenticity_token"=>"ts0PfKZme4q4qqaNgaQRaFJYuCLFCy9HFt8BjFyp/DTfgjnc9MdKA/m65BvQqboX4wMzYGKcBoNRrJViDn2D8A==", "id"=>"2"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 2 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cart_items" SET "quantity" = ?, "updated_at" = ? WHERE "cart_items"."id" = ?[0m  [["quantity", 1], ["updated_at", 2016-11-12 15:41:56 UTC], ["id", 9]]
+  [1m[35m (98.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 110ms (ActiveRecord: 99.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:41:56 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (17.1ms)
+  Rendered layouts/application/_navbar.html.erb (1.3ms)
+Completed 200 OK in 51ms (Views: 46.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:42:29 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (18.3ms)
+  Rendered layouts/application/_navbar.html.erb (1.4ms)
+Completed 200 OK in 59ms (Views: 54.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:29 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:29 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:29 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:29 +0600
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:42:29 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:29 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:29 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:29 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:42:29 +0600
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:42:31 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (24.6ms)
+  Rendered layouts/application/_navbar.html.erb (1.9ms)
+Completed 200 OK in 77ms (Views: 72.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:42:31 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:31 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:31 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:31 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:31 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:31 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:31 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:31 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:42:31 +0600
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:42:31 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (18.2ms)
+  Rendered layouts/application/_navbar.html.erb (1.4ms)
+Completed 200 OK in 54ms (Views: 50.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (17.9ms)
+  Rendered layouts/application/_navbar.html.erb (1.2ms)
+Completed 200 OK in 58ms (Views: 54.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:42:32 +0600
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:44:32 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (77.8ms)
+  Rendered layouts/application/_navbar.html.erb (1.2ms)
+Completed 200 OK in 131ms (Views: 89.0ms | ActiveRecord: 23.5ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:44:32 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:44:32 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:44:32 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:44:32 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:44:32 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:44:32 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:44:32 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:44:32 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:44:32 +0600
+Started POST "/cart/remove/2" for 127.0.0.1 at 2016-11-12 21:44:35 +0600
+Processing by ProductsController#rem1_cart as HTML
+  Parameters: {"authenticity_token"=>"sop09B5CU2noBARKZMgJ9CBEDTXU9rw2D0boZKCrEnnbxUJUTONi4KkURtw1xaKLkR+Gd3NhlfJINXyK8n9tvQ==", "id"=>"2"}
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 2 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35mSQL (78.9ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 9]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 89ms (ActiveRecord: 80.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:44:36 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (20.2ms)
+  Rendered layouts/application/_navbar.html.erb (1.4ms)
+Completed 200 OK in 57ms (Views: 52.4ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/cart/add/2" for 127.0.0.1 at 2016-11-12 21:44:38 +0600
+Processing by ProductsController#a_cart as HTML
+  Parameters: {"authenticity_token"=>"/gjoaZF34asrK32nlHfuGXyElItyWcZXl9fo/8eF4wmXR97Jw9bQImo7PzHFekVmzd8fydXO75PQpHwRlVGczQ==", "id"=>"2"}
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 2 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "cart_items" ("owner_id", "owner_type", "quantity", "item_id", "item_type", "price_cents", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["owner_id", 4], ["owner_type", "Cart"], ["quantity", 1], ["item_id", 2], ["item_type", "Product"], ["price_cents", 4000], ["created_at", 2016-11-12 15:44:38 UTC], ["updated_at", 2016-11-12 15:44:38 UTC]]
+  [1m[35m (65.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 79ms (ActiveRecord: 67.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:44:38 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (20.6ms)
+  Rendered layouts/application/_navbar.html.erb (1.5ms)
+Completed 200 OK in 55ms (Views: 50.4ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/cart/add/2" for 127.0.0.1 at 2016-11-12 21:44:39 +0600
+Processing by ProductsController#a_cart as HTML
+  Parameters: {"authenticity_token"=>"ByCHCvXHuKu1Q5gePsXtWTwZKjQ9iAfLQw1DZu6JUO9ub7Gqp2aJIvRT2ohvyEYmjUKhdpofLg8EfteIvF0vKw==", "id"=>"2"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 2 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cart_items" SET "quantity" = ?, "updated_at" = ? WHERE "cart_items"."id" = ?[0m  [["quantity", 2], ["updated_at", 2016-11-12 15:44:39 UTC], ["id", 10]]
+  [1m[35m (116.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 127ms (ActiveRecord: 117.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:44:39 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (20.9ms)
+  Rendered layouts/application/_navbar.html.erb (1.6ms)
+Completed 200 OK in 63ms (Views: 58.4ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/cart/remove/2" for 127.0.0.1 at 2016-11-12 21:44:41 +0600
+Processing by ProductsController#rem1_cart as HTML
+  Parameters: {"authenticity_token"=>"xY1qNqRCv+mrIr897hh5ybe2jIAbQ7qKyLqAeHXH9TaswlyW9uOOYOoy/au/FdK2Bu0HwrzUk06PyRSWJxOK8g==", "id"=>"2"}
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 2 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cart_items" SET "quantity" = ?, "updated_at" = ? WHERE "cart_items"."id" = ?[0m  [["quantity", 1], ["updated_at", 2016-11-12 15:44:41 UTC], ["id", 10]]
+  [1m[35m (113.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 126ms (ActiveRecord: 114.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:44:41 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.6ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (28.1ms)
+  Rendered layouts/application/_navbar.html.erb (1.9ms)
+Completed 200 OK in 82ms (Views: 76.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:45:00 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (51.2ms)
+  Rendered layouts/application/_navbar.html.erb (1.2ms)
+Completed 200 OK in 100ms (Views: 81.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:45:00 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:45:00 +0600
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:45:00 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:45:00 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:45:00 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:45:00 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:45:00 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:45:00 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:45:00 +0600
+Started POST "/cart/remove/1" for 127.0.0.1 at 2016-11-12 21:45:02 +0600
+Processing by ProductsController#rem1_cart as HTML
+  Parameters: {"authenticity_token"=>"hlsnLkK4D7YxDoOkdhuK8fBNIO5X+/2V7xQZpJHyXtfvFBGOEBk+P3AewTInFiGOQRarrPBs1FGoZ41KwyYhEw==", "id"=>"1"}
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.5ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 1 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35mSQL (248.9ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 7]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 259ms (ActiveRecord: 250.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:45:02 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (27.4ms)
+  Rendered layouts/application/_navbar.html.erb (1.9ms)
+Completed 200 OK in 76ms (Views: 71.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:47:27 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (59.0ms)
+  Rendered layouts/application/_navbar.html.erb (1.8ms)
+Completed 200 OK in 115ms (Views: 95.7ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:27 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:27 +0600
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:47:27 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:27 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:27 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:27 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:27 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:27 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:47:27 +0600
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:47:47 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (17.8ms)
+  Rendered layouts/application/_navbar.html.erb (1.2ms)
+Completed 200 OK in 71ms (Views: 66.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:47:47 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:47 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:47 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:47 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:47 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:47 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:47 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:47 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:47:47 +0600
+Started POST "/cart/remove/2" for 127.0.0.1 at 2016-11-12 21:47:54 +0600
+Processing by ProductsController#rem1_cart as HTML
+  Parameters: {"authenticity_token"=>"rB6Fjr5bipyGUCxF+i+IGFDv50XmAjZXzsisI9BWrULFUbMu7Pq7FcdAbtOrIiNn4bRsB0GVH5OJuzjNgoLShg==", "id"=>"2"}
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ? AND "cart_items"."item_type" = 'Product' AND "cart_items"."item_id" = 2 ORDER BY "cart_items"."id" ASC LIMIT ?[0m  [["owner_id", 4], ["owner_type", "Cart"], ["LIMIT", 1]]
+  [1m[35mSQL (69.0ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 10]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 79ms (ActiveRecord: 70.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:47:54 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  Rendered products/index.html.erb within layouts/application (15.8ms)
+  Rendered layouts/application/_navbar.html.erb (1.4ms)
+Completed 200 OK in 50ms (Views: 45.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:47:56 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  Rendered products/index.html.erb within layouts/application (14.6ms)
+  Rendered layouts/application/_navbar.html.erb (1.2ms)
+Completed 200 OK in 50ms (Views: 45.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:47:56 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:56 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:56 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:56 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:56 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:56 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:56 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:47:56 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:47:56 +0600
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:48:12 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  Rendered products/index.html.erb within layouts/application (26.1ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `to_a' for #<Cart:0x007f8c90186608>
+Did you mean?  to_yaml
+               to_s):
+    68:             <br>
+    69:           <% end %>
+    70:           <%= link_to 'Clear cart', cart_clear_path, method: 'post', class: 'btn btn-danger' %>
+    71:           <%= @cart.to_a %>
+    72:         </div>
+    73:       </div>
+    74:   </div>
+  
+app/views/products/index.html.erb:71:in `_app_views_products_index_html_erb__4561374538692295880_70120844829640'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.9ms)
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:48:19 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  Rendered products/index.html.erb within layouts/application (15.0ms)
+  Rendered layouts/application/_navbar.html.erb (1.2ms)
+Completed 200 OK in 54ms (Views: 50.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:48:19 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:48:19 +0600
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:48:19 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:48:19 +0600
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:48:19 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:48:19 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:48:19 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:48:19 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:48:19 +0600
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:48:27 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  Rendered products/index.html.erb within layouts/application (34.8ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `to_hash' for #<Cart:0x007f8c88231128>
+Did you mean?  to_s):
+    68:             <br>
+    69:           <% end %>
+    70:           <%= link_to 'Clear cart', cart_clear_path, method: 'post', class: 'btn btn-danger' %>
+    71:           <%= @cart.to_hash %>
+    72:         </div>
+    73:       </div>
+    74:   </div>
+  
+app/views/products/index.html.erb:71:in `_app_views_products_index_html_erb__4561374538692295880_70120778061580'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.1ms)
+Started GET "/" for 127.0.0.1 at 2016-11-12 21:48:35 +0600
+Processing by ProductsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."owner_id" = ? AND "cart_items"."owner_type" = ?[0m  [["owner_id", 4], ["owner_type", "Cart"]]
+  Rendered products/index.html.erb within layouts/application (33.6ms)
+  Rendered layouts/application/_navbar.html.erb (1.3ms)
+Completed 200 OK in 69ms (Views: 64.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-12 21:48:35 +0600
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-11-12 21:48:35 +0600
+Started GET "/assets/application.self-a19f97be3429f56905fe60a73fa1a26788dc332e22225fd265fc80b0e64400d7.css?body=1" for 127.0.0.1 at 2016-11-12 21:48:35 +0600
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-12 21:48:35 +0600
+Started GET "/assets/admin/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:48:35 +0600
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-12 21:48:35 +0600
+Started GET "/assets/admin/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-12 21:48:35 +0600
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-12 21:48:35 +0600
+Started GET "/assets/coming-soon-b86ce8779cef141bdab08e8da1401445a4e8379036a51f18b8767ad425fa31e0.png" for 127.0.0.1 at 2016-11-12 21:48:36 +0600

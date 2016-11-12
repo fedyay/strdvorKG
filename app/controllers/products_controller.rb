@@ -25,4 +25,24 @@ class ProductsController < ApplicationController
 
     redirect_to root_path
   end
+
+  def rem1_cart
+    @cart = Cart.find(session[:cart_id])
+
+    @cart.remove(Product.find(params[:id]), 1)
+
+    redirect_to root_path
+  end
+
+  def clear_cart
+    if session[:cart_id] == nil
+      @cart = Cart.create
+      session[:cart_id] = @cart.id
+    else
+      @cart = Cart.find(session[:cart_id])
+      @cart.clear
+    end
+
+    redirect_to root_path
+  end
 end
