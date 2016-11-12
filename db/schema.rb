@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151021143359) do
+ActiveRecord::Schema.define(version: 20161112150557) do
+
+  create_table "cart_items", force: :cascade do |t|
+    t.integer  "owner_id"
+    t.string   "owner_type"
+    t.integer  "quantity"
+    t.integer  "item_id"
+    t.string   "item_type"
+    t.integer  "price_cents",    default: 0,     null: false
+    t.string   "price_currency", default: "USD", null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -26,9 +42,8 @@ ActiveRecord::Schema.define(version: 20151021143359) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "category_id"
+    t.index ["category_id"], name: "index_products_on_category_id"
   end
-
-  add_index "products", ["category_id"], name: "index_products_on_category_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -43,8 +58,7 @@ ActiveRecord::Schema.define(version: 20151021143359) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.boolean  "admin",               default: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

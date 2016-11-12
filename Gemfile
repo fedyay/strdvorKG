@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'acts_as_shopping_cart', '~> 0.4.0'
 gem 'puma', '~> 3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
