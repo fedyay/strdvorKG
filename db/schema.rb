@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(version: 20161112150557) do
   end
 
   create_table "carts", force: :cascade do |t|
+    t.string   "phone"
+    t.string   "name"
+    t.string   "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

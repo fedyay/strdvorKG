@@ -1,0 +1,16 @@
+<h3>You are buing:</h3>
+<% @cart.cart_items.each do |item| %>
+  <% product = Product.find(item.item_id) %>
+  <%= product.title %> x <%= item.quantity %>
+  <br>
+<% end %>
+
+<%= form_for :cart, url: subb_path do |f| %>
+  <%= f.label 'Your phone' %> <br>
+  <%= f.text_field :phone %> <br>
+
+  <%= f.label 'Name' %> <br>
+  <%= f.text_field :name %> <br>
+
+  <%= f.submit 'Place order' %>
+<% end %>
