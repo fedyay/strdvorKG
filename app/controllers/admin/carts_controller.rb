@@ -4,16 +4,15 @@ class Admin::CartsController < AdminController
     @subbed = Cart.where(status: 'subbed').order(id: :desc)
   end
 
-  def processing
-    @processing = Cart.where(status: 'processing').order(id: :desc)
+  def complete
+    @cart = Cart.find(params[:id])
+    @cart.status = 'completed'
+
+    @cart.save
   end
 
   def completed
     @completed = Cart.where(status: 'completed').order(id: :desc)
-  end
-
-  def declined
-    @declined = Cart.where(status: 'declined').order(id: :desc)
   end
 
   def destroy

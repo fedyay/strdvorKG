@@ -4,8 +4,6 @@
   </div>
   <div class="col-sm-4">
     <%= link_to 'Completed', admin_carts_completed_path, class: 'btn btn-default' %>
-    <%= link_to 'Declined', admin_carts_declined_path , class: 'btn btn-default' %>
-    <%= link_to 'Processing', admin_carts_processing_path, class: 'btn btn-default' %>
   </div>
 </div>
 
@@ -27,6 +25,7 @@
           <td><%= order.total %></td>
           <td>
             <%= link_to 'Delete', admin_carts_destroy_path(order), method: 'delete', class: 'btn btn-danger' %>
+            <%= link_to 'Process', admin_carts_process_path(order), method: 'post', class: 'btn btn-success' %>
           </td>
         </tr>
     <% end %>
